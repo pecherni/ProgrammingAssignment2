@@ -1,8 +1,8 @@
 ## Put comments here that give an overall description of what your
 ## functions do
-
+## Caching the matrix (the makeCacheMatrix function) and finding the inverse matrix (cacheSolve returns the inverse of X).
 ## Write a short comment describing this function
-
+## A set of functions for setting the input and output matrix.  Returns a list of functions.
 makeCacheMatrix <- function(x = matrix()) {
 m <- NULL
   set <- function (y) {
@@ -17,7 +17,9 @@ m <- NULL
 
 
 ## Write a short comment describing this function
-
+## If there is already a cached result, it simply returns to speed up the result("getting cached data").
+## If the matrix has changed, a new value is cached with the setinverse function.
+## cacacheSolve uses functions from the makeCacheMatrix list.
 cacheSolve <- function(x, ...) {
   m <- x$getmatrix()
   if(!is.null(m)){
